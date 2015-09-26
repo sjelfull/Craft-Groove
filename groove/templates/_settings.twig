@@ -1,0 +1,23 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    first:        true,
+    label:        "Private token"|t,
+    id:           'privateToken',
+    name:         'privateToken',
+    instructions: ""|t,
+    value:        settings.privateToken,
+    autofocus:    true,
+    errors:       settings.getErrors('privateToken')
+}) }}
+
+{{ forms.textField({
+    first:        true,
+    label:        "Default mailbox"|t,
+    id:           'defaultMailbox',
+    name:         'defaultMailbox',
+    instructions: "E-mail address of the default mailbox to send to"|t,
+    value:        settings.defaultMailbox,
+    autofocus:    true,
+    errors:       settings.getErrors('defaultMailbox')
+}) }}
